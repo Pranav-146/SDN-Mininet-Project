@@ -1,0 +1,7 @@
+﻿Controller used: POX
+Module: forwarding.l2_learning
+Topology: single,3
+
+Commands used:
+./pox.py forwarding.l2_learning
+sudo mn --topo single,3 --controller remote
