@@ -79,25 +79,25 @@ The ICMP ping output clearly demonstrates the effectiveness of the SDN controlle
 ### 1. Controller Terminal Output (MAC Learning & ARP Handling)
 The following capture shows the controller's log output — initial ARP flooding for unknown hosts, MAC address learning, direct ARP reply generation for known hosts, and OpenFlow rule installation.
 
-<img width="783" height="351" alt="image" src="https://github.com/user-attachments/assets/3ff692ce-0eec-4c14-bc51-f887cc97aaf0" />
+<img width="1000" height="641" alt="image" src="https://github.com/user-attachments/assets/074e22a5-67f7-4d87-91ab-b4051caf9689" />
 
 ---
 
 ### 2. Ping Statistics (Latency Comparison)
 This output illustrates the significant latency reduction between the first controller-handled ping and the subsequent hardware-accelerated pings.
 
-<img width="618" height="473" alt="image" src="https://github.com/user-attachments/assets/04dfb8d2-de97-48f0-aa7e-d46d5b7d9abb" />
+<img width="997" height="214" alt="image" src="https://github.com/user-attachments/assets/bc2410e4-d81d-4e2a-bfab-7f40a6eadc31" />
 
 ---
 
 ### 3. Flow Table Verification (`dpctl dump-flows`)
 This confirms that explicit forwarding rules with configured timeouts were successfully pushed to switch `s1`.
 
-<img width="1836" height="114" alt="image" src="https://github.com/user-attachments/assets/93411430-13f7-4039-893a-95ea7abaa0e9" />
+<img width="1958" height="108" alt="image" src="https://github.com/user-attachments/assets/2dc05450-6c79-4147-a2c1-f7ffc6c41cc4" />
 
 ---
 
 ### 4. Wireshark Capture
 The packet-level trace validates the end-to-end behavior: the initial ARP Broadcast, the controller-generated ARP Reply, followed by a clean ICMP Echo Request/Reply sequence.
 
-<img width="1847" height="344" alt="image" src="https://github.com/user-attachments/assets/8815d2f2-a7b6-4f1d-b4b4-032bf7f2fb50" />
+<img width="980" height="823" alt="image" src="https://github.com/user-attachments/assets/ade86e2c-8477-4ada-95fe-8b46a45c1d05" />
